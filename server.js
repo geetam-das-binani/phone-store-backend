@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 dotenv.config({ path: path.join(__dirname, "./config/config.env") });
-const PORT=process.env.PORT || 3001
+const PORT=process.env.PORT || 3000
 connect(process.env.NAME, process.env.PASSWORD);
 app.use("/", router);
 
