@@ -14,7 +14,7 @@ app.use(express.json());
 
 dotenv.config({ path: path.join(__dirname, "./config/config.env") });
 const PORT = process.env.PORT || 3002;
-app.use("/", router);
+app.use("/api/v1", router);
 
 connect(process.env.NAME, process.env.PASSWORD).then(() => {
   console.log("Connected to Db Successfully");
